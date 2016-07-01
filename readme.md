@@ -4,7 +4,7 @@
 
 * Open the index.htm in Chrome or Safari
 * Input the IP for YuePixels LED driver
-* Choose music 
+* Choose mp3 files 
 * Have fun
 
 Thanks for baoshi's fun project ESP-Audio-Spectrum
