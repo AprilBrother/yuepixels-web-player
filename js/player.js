@@ -15,8 +15,6 @@ try {
 
 /* globals */
 var player = $('#player'), 
-serverUrl = 'ws://' + location.hostname + ':8080',
-//serverUrl = 'ws://yuepixels.local:8080',
 ws = null,
 playPause = $('#playpause', player), 
 index = 0,
@@ -66,6 +64,12 @@ function getWs() {
         return ws;
     }
 
+    if (!$('#ip').val().length) {
+        return null;
+    }
+
+    serverUrl = 'ws://' + $('#ip').val() + ':8080',
+    //serverUrl = 'ws://yuepixels.local:8080',
     ws = new WebSocket(serverUrl);
     console.log('Connecting to YuePixels'); 
     ws.onopen = function() {
